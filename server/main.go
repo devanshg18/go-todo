@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"go-todo/server/router"
 	"log"
 	"net/http"
+
+	"github.com/devanshg18/go-todo/server/router"
 	//"go-todo/server/middleware"
 )
 

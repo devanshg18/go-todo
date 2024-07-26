@@ -4,10 +4,11 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"go-server/models"
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/devanshg18/go-todo/server/models"
 
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
@@ -70,7 +71,7 @@ func createDBInstance() {
 }
 
 // GetAllTask get all the task route
-func GetAllTask(w http.ResponseWriter, r *http.Request) {
+func GetAllTasks(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Context-Type", "application/x-www-form-urlencoded")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	payload := getAllTask()
@@ -130,7 +131,7 @@ func DeleteTask(w http.ResponseWriter, r *http.Request) {
 }
 
 // DeleteAllTask delete all tasks route
-func DeleteAllTask(w http.ResponseWriter, r *http.Request) {
+func DeleteAllTasks(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Context-Type", "application/x-www-form-urlencoded")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	count := deleteAllTask()
